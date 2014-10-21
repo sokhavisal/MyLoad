@@ -15,13 +15,14 @@
 	 $sql.='SELECT * FROM viewSummaryDetail where CusID="'.$CusID.'" AND LoadID="'.$LoadID.'" AND LoadType="'.$LoadType.'" ';
 	$result= SQLQuery($sql);
 	$RowPos =0;
+	
 	   for  ($i=0;$i<count($result);$i++) {
 		$RowPos = $RowPos + 1;
                 $row=$result[$i];
 		
 		
 		$DataRow.='<tr>';
-		$DataRow.='<td class="lalign" style="color:red;">';
+		$DataRow.='<td class="lalign" style="color:red;font-size:15px; ">';
 		$DataRow.=''.checkboxOther($row['Status']).'';
 		$DataRow.='</td><td>';
 		$DataRow.=''.$row['LoadID'].'';
@@ -63,6 +64,7 @@
 		//echo "</td></tr>";
 		
 	   }
+	   $UserName=$row['CusName'];
 	
 function checkboxOther($check){
    // $check='checked';
@@ -91,17 +93,18 @@ function checkboxOther($check){
    
  <div id="wrapper">
      <div id="topleft" style="width:30%;  float: left; margin: 0px; ">
-	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:13px; color: #2391dd;">Invoice No:____________</h5>
-	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:13px; color: #2391dd;">Date/Month/Year:____/_______/__________</h5>
-	  <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:13px; color: #2391dd;">Signature: .........................</h5>
+	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px; color: #2391dd;">Invoice No:____________</h5>
+	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px; color: #2391dd;">Date/Month/Year:____/_______/__________</h5>
+	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px; color: #2391dd;">User Name:  <span style="color:red;"><?php echo $UserName;?></span> </h5>
+	 <h5 style=" padding: 10px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px; color: #2391dd;">Signature: .........................</h5>
      </div>
      
      
      <div id="topright" style="width: 30%;  float: right;  margin: 0px;">
 	 <span style="float: right;"><img src="logo/nobg.png" alt="Smiley face" height="100" width="120"  ></span>
 	 <div style="clear:both"></div>
-	 <h5 style=" padding: 5px; font-family: 'Amarante', Tahoma, sans-serif; font-size:13px; text-align: right;">Logo</h5>
-	 <h5 style=" margin: 5px; font-family: 'Amarante', Tahoma, sans-serif; font-size:13px;text-align: right; color: #2391dd;">Tel:098794488 / 012785855</h5>
+	 <h5 style=" padding: 5px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px; text-align: right;">Logo</h5>
+	 <h5 style=" margin: 5px; font-family: 'Amarante', Tahoma, sans-serif; font-size:15px;text-align: right; color: #2391dd;">Tel:098794488 / 012785855</h5>
      </div>
      
      <br>   <br>   <br>   <br>   <br>   <br>
@@ -132,47 +135,48 @@ function checkboxOther($check){
 
   </table>
      <hr> <hr>
-  <table id="footer" border="1" >
+     <table id="footer" border="1"  >
       
        <tr>
-	<th style="color: #008000; padding: 10px 10px 5px 50px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Paid:</span></th>
-	<th style="color: #008000; padding: 0px 0px  0px 30px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>UnPaid:</span></th>
-	<th style="color: red; padding: 0px 0px  0p 30px; font-size: 13px;"><span></span></th>
-	<th style="color: red; padding: 0px 0px  0px 100px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 100px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
-        <th style="color: #ff69b4; padding: 0px 0px  0px 40px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>850000</span></th>
-	 <th style="color: #0000ff; padding: 0px 0px  0px 40px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
+	<th style="color: #008000; padding: 10px 10px 10px 10px; font-size: 10px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Paid:</span></th>
+	<th style="color: #008000; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>UnPaid:</span></th>
+	<th style="color: red; padding: 10px 10px  10p 10px; font-size: 13px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
+        <th style="color: #ff69b4; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>850000</span></th>
+	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
       
        <tr>
-	<th style="color: red; padding: 0px 0px  0px 70px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20</span></th>
-	<th style="color: red; padding: 0px 0px  0px 30px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>10</span></th>
-	<th style="color: red; padding: 0px 0px  0px 100px; font-size: 13px;"><span></span></th>
-	<th style="color: red; padding: 0px 0px  0px 100px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 100px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
-        <th style="color: #6dc066; padding: 0px 0px  0px 40px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>85000099999</span></th>
-	<th style="color: #0000ff; padding: 0px 0px  0px 40px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20</span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>10</span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
+        <th style="color: #6dc066; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>85000099999</span></th>
+	<th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
       
        <tr>
-	<th style="color: red; padding: 10px 10px  10px 100px;"><span></span></th>
-	<th style="color: red; padding: 0px 0px  0px 50px;"><span></span></th>
-	<th style="color: red; padding: 0px 0px  0px 100px; font-size: 13px;"><span></span></th>
-	<th style="color: red; padding: 0px 0px  0px 100px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 100px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Grand Total:</span></th>
-        <th style="color: red; padding: 0px 0px  0px 40px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>858880000000880000</span></th>
-	 <th style="color: #0000ff; padding: 0px 0px  0px 40px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Grand Total:</span></th>
+        <th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>858880000000880000</span></th>
+	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
  
 
   </table>
-     
-     
-  <hr>
-    <h5 style="text-align: center; color: #2391dd;   margin: 15px; font-size: 12px;  font-family: 'Amarante', Tahoma, sans-serif;"> Thank You for Your join with me !</h5> 
-    <h5 style="text-align: justify; color: #2391dd; font-size: 11px;  font-family: 'Amarante', Tahoma, sans-serif;">Create By: visal</h5>
-    <h5 style="text-align: right; color: #2391dd;  margin: 15px; font-size: 11px; font-family: 'Amarante', Tahoma, sans-serif; "> Date: 20-10-2014</h5>
-  
+     <table id="footbuttom" style="float: center; background-color: red;" >
+	    <div id="footerrpt" style="width: 100%; color: red;">
+			<hr>
+		    <h5 style="text-align: center; color: #2391dd;   margin: 15px; font-size: 17px;  font-family: 'Amarante', Tahoma, sans-serif;"> Thank You for Your join with me !</h5> 
+		    <h5 style="text-align: justify; color: #2391dd; font-size: 15px;  font-family: 'Amarante', Tahoma, sans-serif;">Create By: visal</h5>
+		    <h5 style="text-align: right; color: #2391dd;  margin: 15px; font-size: 11px; font-family: 'Amarante', Tahoma, sans-serif; "> Date: 20-10-2014</h5>
+	    </div>
+     </table>
  </div> 
 </body>
 
