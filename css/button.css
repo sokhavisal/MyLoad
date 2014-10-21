@@ -1,0 +1,29 @@
+.myButton {
+	-moz-box-shadow: -1px 4px 14px -7px #276873;
+	-webkit-box-shadow: -1px 4px 14px -7px #276873;
+	box-shadow: -1px 4px 14px -7px #276873;
+	background-color:#599bb3;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:15px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.footerInvoic tr th {
+    background-color:red;
+}
+    
