@@ -10,9 +10,10 @@
 	$LoadType = filter_input(INPUT_GET, 'loadtype', FILTER_SANITIZE_STRING);
 	//$TableNo=filter_input(INPUT_GET, 'Con', FILTER_SANITIZE_STRING);
 	//echo 
+	//$sql='';
 	//$sql= Getdata_rptSummary($CusID,$LoadID,$LoadType);
-	 $sql='';
-	 $sql.='SELECT * FROM viewSummaryDetail where CusID="'.$CusID.'" AND LoadID="'.$LoadID.'" AND LoadType="'.$LoadType.'" ';
+	  $sql= getdata_ViewSummary($LoadID,$CusID,$LoadType);
+	// $sql.='SELECT * FROM viewSummaryDetail where CusID="'.$CusID.'" AND LoadID="'.$LoadID.'" AND LoadType="'.$LoadType.'" ';
 	$result= SQLQuery($sql);
 	$RowPos =0;
 	
@@ -65,6 +66,12 @@
 		
 	   }
 	   $UserName=$row['CusName'];
+	   $UnPaid= $row['TotalUnPaid'];
+	   $Paid=$row["TotalPaid"];
+	   $RemainTotal=$row["RemainTotal"];
+	   $CurrentTotal=$row["CurrentTotal"];
+	   $GrandTotal=$row["CusAmount"];
+	   
 	
 function checkboxOther($check){
    // $check='checked';
@@ -143,17 +150,17 @@ function checkboxOther($check){
 	<th style="color: red; padding: 10px 10px  10p 10px; font-size: 13px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
-        <th style="color: #ff69b4; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>850000</span></th>
+        <th style="color: #ff69b4; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $CurrentTotal;?></span></th>
 	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
       
        <tr>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20</span></th>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>10</span></th>
+	   <th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $UnPaid;?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
-        <th style="color: #6dc066; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>85000099999</span></th>
+        <th style="color: #6dc066; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $RemainTotal; ?></span></th>
 	<th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
       
@@ -163,7 +170,7 @@ function checkboxOther($check){
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: #088da5; padding: 10px 10px  10px 350px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Grand Total:</span></th>
-        <th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>858880000000880000</span></th>
+        <th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $GrandTotal;?></span></th>
 	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
  
