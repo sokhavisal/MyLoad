@@ -85,7 +85,7 @@ var mainf ={
 						alert(msg);
 					     }else{
 						 
-					      printExternal('getdata_report.php?Cusid='+ CusIDDeatailform +'&loadid='+loadIDDeatailform+'&loadtype='+loadTypeDeatailform);
+					      printExternal('getdata_reportA5.php?Cusid='+ CusIDDeatailform +'&loadid='+loadIDDeatailform+'&loadtype='+loadTypeDeatailform);
 					    }
 					 }
 			      });
@@ -170,7 +170,7 @@ var mainf ={
 		  //  alert(CusIDDeatailform);
 		   // alert(loadIDDeatailform);
 		   // alert(loadTypeDeatailform);
-		    // event.onComplete = function() {
+		  // event.onComplete = function() {
 			w2ui.gSummary.fixedBody=false;
 			w2ui.gSummary.url='getdata_Summary.php?Cusid='+CusIDDeatailform+'&loadid='+loadIDDeatailform+'&loadtype='+loadTypeDeatailform;
 			w2ui.gSummary.reload();
