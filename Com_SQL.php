@@ -62,7 +62,7 @@ function getdata_ViewSummary($LoadID,$CusID,$LoadType){
     $sql.='StartDate ,';
     $sql.='EndDate ,';
     $sql.='Status, ';
-   
+   $sql.='CusProfit, ';
     // $sql.='(select sum(CusAmountPerDay)  from viewSummaryDetail where LoadID= "'.$LoadID.'"   AND CusID = "'.$CusID.'"   AND LoadType = "'.$LoadType.'"  ) AS CurrentTotal , ';
     $sql.='(select sum(CusAmountPerDay)  from viewSummaryDetail where LoadID= "'.$LoadID.'"   AND CusID = "'.$CusID.'"   AND LoadType = "'.$LoadType.'"  ) AS CurrentTotal , ';
      $sql.='(SELECT CusAmount FROM tblCusLoadDetail  where LoadID= "'.$LoadID.'"   AND CusID = "'.$CusID.'"   AND LoadType = "'.$LoadType.'" )  -(select sum(CusAmountPerDay)  from viewSummaryDetail where LoadID= "'.$LoadID.'"   AND CusID = "'.$CusID.'"   AND LoadType = "'.$LoadType.'"  ) AS RemainTotal  , ';
