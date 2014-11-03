@@ -1,6 +1,6 @@
 <?php
 
- require_once __DIR__ .'/app/sys_const.php';
+    require_once __DIR__ .'/app/sys_const.php';
     require_once __DIR__ .'/common/com.php';
     require_once 'Com_SQL.php';
     $DataRow ='';
@@ -155,7 +155,7 @@ function checkboxOther($check){
       </tr>
       
        <tr>
-	   <th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $UnPaid;?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
