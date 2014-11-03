@@ -151,7 +151,7 @@ function checkboxOther($check){
 	<th style="color: #008000; padding: 10px 10px  10px 10px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>UnPaid:</span></th>
 	<th style="color: #008000; padding: 10px 10px  10p 10px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>ReturnAmont:</span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 200px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 150px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
         <th style="color: #ff69b4; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $CurrentTotal;?></span></th>
 	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
@@ -159,9 +159,9 @@ function checkboxOther($check){
        <tr>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $UnPaid;?></span></th>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $CurrentTotal; echo '-'; echo  $Profit; echo '='; echo $ReturnAmount;?></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span><?php  echo $ReturnAmount;?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 200px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 150px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
         <th style="color: #6dc066; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $RemainTotal; ?></span></th>
 	<th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
@@ -171,7 +171,7 @@ function checkboxOther($check){
 	<th style="color: red; padding: 10px 10px  10px 10px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
-	<th style="color: #088da5; padding: 10px 10px  10px 200px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Grand Total:</span></th>
+	<th style="color: #088da5; padding: 10px 10px  10px 150px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Grand Total:</span></th>
         <th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $GrandTotal;?></span></th>
 	 <th style="color: #0000ff; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span>20-10-2014</span></th>
       </tr>
