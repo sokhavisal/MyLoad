@@ -71,6 +71,8 @@
 	   $RemainTotal=$row["RemainTotal"];
 	   $CurrentTotal=$row["CurrentTotal"];
 	   $GrandTotal=$row["CusAmount"];
+	   $ReturnAmount= $row["CurrentTotal"]-$row["CusProfit"];
+	   $Profit=$row["CusProfit"];
 	   
 	
 function checkboxOther($check){
@@ -122,8 +124,8 @@ function checkboxOther($check){
      
     <thead>
       <tr>
-	<th ><span>Status</span></th>
-	<th ><span>L-ID</span></th>
+	<th><span>Status</span></th>
+	<th><span>L-ID</span></th>
 	<th><span>C-ID</span></th>
         <th><span>C-Name</span></th>
         <th><span>AmountP/D</span></th>
@@ -145,9 +147,9 @@ function checkboxOther($check){
      <table id="footer" border="1"  >
       
        <tr>
-	<th style="color: #008000; padding: 10px 10px 10px 10px; font-size: 10px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Paid:</span></th>
-	<th style="color: #008000; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span>UnPaid:</span></th>
-	<th style="color: red; padding: 10px 10px  10p 10px; font-size: 13px;"><span></span></th>
+	<th style="color: #008000; padding: 10px 10px 10px 10px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Paid:</span></th>
+	<th style="color: #008000; padding: 10px 10px  10px 10px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>UnPaid:</span></th>
+	<th style="color: #008000; padding: 10px 10px  10p 10px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>ReturnAmont:</span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: #088da5; padding: 10px 10px  10px 200px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Current Total:</span></th>
         <th style="color: #ff69b4; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $CurrentTotal;?></span></th>
@@ -155,9 +157,9 @@ function checkboxOther($check){
       </tr>
       
        <tr>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $UnPaid;?></span></th>
-	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $Paid; ?></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $UnPaid;?></span></th>
+	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 15px;font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $CurrentTotal; echo '-'; echo  $Profit; echo '='; echo $ReturnAmount;?></span></th>
 	<th style="color: red; padding: 10px 10px  10px 10px; font-size: 13px;"><span></span></th>
 	<th style="color: #088da5; padding: 10px 10px  10px 200px; font-size: 18px; font-family: 'Amarante', Tahoma, sans-serif;"><span>Remain Total:</span></th>
         <th style="color: #6dc066; padding: 10px 10px  10px 10px; font-size: 15px; font-family: 'Amarante', Tahoma, sans-serif;"><span><?php echo $RemainTotal; ?></span></th>
