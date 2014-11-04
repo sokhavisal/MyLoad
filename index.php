@@ -6,6 +6,7 @@
     
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <script type="text/javascript"  src="js/jquery.js"></script>
+       <link rel="icon" href="logo/logotittle.ico" type="image/x-icon" />
      <!--<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.min.css" />-->
       <link rel="stylesheet" type="text/css" href="css/button.css" />
        <!--//<script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.min.js"></script>-->
